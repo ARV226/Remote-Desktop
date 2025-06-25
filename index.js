@@ -36,7 +36,7 @@ app.get('/run', async (req, res) => {
     // Step 2: If not running, start it
     if (cs.state !== 'Available') {
       console.log('🟢 Starting Codespace...');
-      await api.post(`/user/codespaces/${id}/start`);
+      await api.post(`/user/codespaces/${CODESPACE_NAME}/start`);
       await wait(45000); // wait 45 sec for boot
     }
 
