@@ -25,8 +25,8 @@ app.get('/run', async (req, res) => {
 
   try {
     console.log(`🟢 Logging in to GitHub`);
-    run(`gh auth login --with-token <<< "${GH_TOKEN}"`);
-
+run(`echo "${GH_TOKEN}" | gh auth login --with-token`);
+    
     console.log(`🟢 Starting Codespace: ${CODESPACE}`);
     run(`gh codespace start -c ${CODESPACE}`);
 
