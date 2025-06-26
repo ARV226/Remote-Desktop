@@ -36,8 +36,8 @@ app.get('/run', async (req, res) => {
     }
 
     // Step 2: Wait ~5–6 minutes for your commands to execute
-    console.log('⏳ Waiting 6 minutes before stopping...');
-    await wait(360000); // 6 minutes
+    console.log('⏳ Waiting 7 minutes before stopping...');
+    await wait(420000); // 7 minutes
 
     // Step 3: Shut down Codespace
     console.log('🔴 Stopping Codespace...');
